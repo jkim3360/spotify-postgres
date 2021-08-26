@@ -1,0 +1,29 @@
+{
+    "name": "Spotify Demo API",
+    "version": "1.0.0",
+    "description": "A simple Postgres database app",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "create-db": "psql -U postgres -tc \"SELECT 1 FROM pg_database WHERE datname = 'spotifydb'\" | grep -q 1 | psql -U postgres -c \"CREATE DATABASE spotifydb\"",
+        "init": "psql -U postgres -tc \"SELECT 1 FROM pg_database WHERE datname = 'spotifydb'\" | grep -q 1 | psql -U postgres -c \"CREATE DATABASE spotifydb\""
+    },
+    "author": "James Daeho Kim",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "helmet": "^4.6.0",
+        "pg": "^8.4.2",
+        "pg-hstore": "^2.3.3",
+        "querystring": "^0.2.1",
+        "sequelize": "^6.3.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.6"
+    }
+}
