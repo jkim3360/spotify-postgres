@@ -23,7 +23,7 @@ This endpoint creates a track. More specifically it does the following:
 - adds artist to 'artists' table if artist does not exist
 - creates reference key to 'artist' from 'track'
 - sorts multiple tracks according to popularity and selects the most popular track to store in the database
-- To access this endpoint, you must add an API key to complete the request via query parameter. (e.g. http://localhost:5000/tracks/GBAYE060147apikey=qQG5jtHFEw7PylRBc9S53mtNyNzHKLZt) The API key in the parentheses was created to demonstrate an extra layer of security for demonstration purposes. Please use it to access this endpoint. You can refer to `./scripts/functions.js` to view the API key generation.
+- To access this endpoint, you must add an API key to complete the request via query parameter. (e.g. http://localhost:5000/tracks/GBAYE060147?apikey=qQG5jtHFEw7PylRBc9S53mtNyNzHKLZt) The API key in the parentheses was created to demonstrate an extra layer of security for demonstration purposes. Please use it to access this endpoint. You can refer to `./scripts/functions.js` to view the API key generation.
 - The operation ID is `addTrackByISRC` and can be found in `./controller/track.controller.js`
 
 *GET*
